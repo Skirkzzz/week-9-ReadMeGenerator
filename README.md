@@ -1,4 +1,4 @@
-# week-9-ReadMeGenerator
+# 09 Node.js Homework: Professional README Generator
 
 ## Description
 
