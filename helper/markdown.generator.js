@@ -1,4 +1,61 @@
-function generateMarkdown(userResponses) {
+const inquirer = require('inquirer')
+
+inquirer
+.createPromptModule([
+  {
+    type: 'input',
+    name: 'name_your_application',
+    message: 'What is the name of your project?'
+  }
+  {
+    type: 'input',
+    name: 'application_purpose',
+    message:'What is the purpose of the application?'
+},
+  {
+    type: 'input',
+    name: 'describe_your_project',
+    message: 'Give your project a brief description'
+  }
+  {
+    type: 'input',
+    name: 'deployment',
+    message: 'Give brief description on how to deploy your application'
+  }
+  {
+    type: 'input',
+    name: 'testing',
+    message:'describe how to test the application:'
+},
+  {
+    type: 'list',
+    name: 'licence',
+    message:'select a license:',
+    choices: [ "MIT License", "Apache License 2.0", "GNU General Public License v2.0","GNU General Public License v3.0","ISC License"]
+},
+{
+  type: 'input',
+  name: 'contact_email',
+  message:'Type your email for questions:'
+},
+{
+  type: 'input',
+  name: 'github',
+  message:'Type Github username for Questions:'
+},
+])
+.then((response) => {
+  licenseSelect (response)
+  htmlRender(response)
+  })
+
+  
+
+
+
+
+
+/*function generateMarkdown(userResponses) {
   // Generate Table of Contents conditionally based on userResponses
   let draftToC = `
 ## Table of Contents
