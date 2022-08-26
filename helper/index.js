@@ -86,3 +86,35 @@ For further question, please visit https://github.com/${response.github}, or con
     err ? console.error(err) : console.log("Your README has been generated")
   );
 };
+
+let licencedescription = "";
+let licenceImg = "";
+
+const licenseSelect = (response) => {
+  if (response.licence === "Apache License 2.0") {
+    licenceImg =
+      "![license](https://img.shields.io/badge/license-Apache%20License%202.0-green)";
+  }
+
+  if (response.licence === "GNU General Public License v2.0") {
+    licenceImg =
+      "![license](https://img.shields.io/badge/license-GNU%20General%20Public%20License%20v2.0-green)";
+  }
+
+  if (response.licence === "GNU General Public License v3.0") {
+    licenceImg =
+      "![license](https://img.shields.io/badge/license-GNU%20General%20Public%20License%20v3.0-green)";
+  }
+
+  if (response.licence === "ISC License") {
+    licenceImg =
+      "![license](https://img.shields.io/badge/license-ISC%20license-green)";
+  }
+
+  if (response.licence === "MIT License") {
+    licenceImg =
+      "![license](https://img.shields.io/badge/license-MLT%20license-green)";
+  }
+
+  licenceDescription = "Licenced by " + response.licence;
+};
