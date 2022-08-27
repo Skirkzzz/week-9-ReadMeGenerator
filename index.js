@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 
 inquirer
-  .createPromptModule([
+  .prompt([
     {
       type: "input",
       name: "name_your_application",
@@ -56,7 +56,7 @@ const renderHtml = (response) => {
 
         
 ## Description
-${response.describe_your_project}
+${response.description}
     
 ## Table of Contents
 - [deployment](#deployment)
@@ -72,7 +72,7 @@ ${response.deployment}.
 ## testing
 ${response.testing}.
 ## licence
-${licence}.
+${response.licence}.
 ## contact
 ${response.contact}.
 ## github 
