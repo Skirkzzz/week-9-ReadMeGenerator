@@ -51,7 +51,7 @@ inquirer
   });
 
 const renderHtml = (response) => {
-  const readMe = `# ${response.name_your_application}
+  readMe = `# ${response.name_your_application}
     
 
         
