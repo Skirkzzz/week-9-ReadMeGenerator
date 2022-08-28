@@ -59,23 +59,23 @@ const renderHtml = (response) => {
 ${response.description}
     
 ## Table of Contents
-- [deployment](#deployment)
-- [testing](#testing)
-- [licence](#licence)
-- [contact](#contact)
-- [github](#github)
+- [Deployment](#deployment)
+- [Testing](#testing)
+- [Licence](#licence)
+- [Contact](#contact)
+- [Github](#github)
 
     
     
-## deployment
+## Deployment
 ${response.deployment}.
-## testing
+## Testing
 ${response.testing}.
-## licence
+## Licence
 ${response.licence}.
-## contact
+## Contact
 ${response.contact}.
-## github 
+## Github 
 ${response.github}.
     
 ## Questions
